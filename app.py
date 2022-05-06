@@ -22,12 +22,12 @@ def index():
         post = Post(text)
         db.session.add(post)
         db.session.commit()
-    if request.method == 'POST':
+    elif request.method == 'POST':
         cat = request.form['cat']
         post = Post(cat)
         db.session.add(post)
         db.session.commit()
-    if request.method == 'POST':
+    elif request.method == 'POST':
         price = request.form['price']
         post = Post(price)
         db.session.add(post)
